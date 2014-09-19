@@ -1,12 +1,12 @@
 CC			= g++
 CFLAGS		= -c -g  -Wall
-LDFLAGS		= -lpthread -lpcap
+LDFLAGS		= -lpthread -lpcap -lm
 
 SOURCES 	= $(wildcard *.cpp)
 INCLUDES	= -I.
 
 OBJECTS		= $(SOURCES:.cpp=.o)
-TARGET		= thread
+TARGET		= sslclient
 
 all: $(SOURCES) $(TARGET)
 
