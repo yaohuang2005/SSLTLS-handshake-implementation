@@ -1,11 +1,11 @@
-CC			= g++
+CC			= gcc
 CFLAGS		= -c -g  -Wall -Wno-pointer-sign
 LDFLAGS		= -lpthread -lpcap -lm
 
-SOURCES 	= $(wildcard *.cpp)
+SOURCES 	= $(wildcard *.c)
 INCLUDES	= -I.
 
-OBJECTS		= $(SOURCES:.cpp=.o)
+OBJECTS		= $(SOURCES:.c=.o)
 TARGET		= sslclient
 
 all: $(SOURCES) $(TARGET)
